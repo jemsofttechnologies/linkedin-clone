@@ -1,11 +1,16 @@
 import React from "react";
-// import { Counter } from './features/counterSlice';
 import "./App.css";
+import Header from "./Header";
 
 function App() {
   return (
-    <div className="App">
-      <h1>Happy Hacking</h1>
+    <div className="app">
+      {/* Header */}
+      <Header />
+      {/* App body */}
+        {/* Sidebar */}
+        {/* Feed */}
+        {/* widgets */}
     </div>
   );
 }
