@@ -1,30 +1,32 @@
 .login {
 	display: grid;
 	place-items: center;
+	margin-right: auto;
+	margin-left: auto;
 	padding-top: 100px;
 	padding-bottom: 100px;
 }
 .login > img {
 	object-fit: contain;
-	height: 70px;
+	height: 120px;
 	margin-top: 20px;
 	margin-bottom: 20px;
 }
-form {
+.login > form {
 	display: flex;
 	flex-direction: column;
-	width: 30%;
-	min-width: 25%;
 }
-form > input {
-	margin-bottom: 20px;
+.login > form > input {
+	width: 350px;
+	height: 25px;
+	font-size: 18px;
+	margin-bottom: 10px;
 	padding: 10px;
 	border-radius: 5px;
 	border-color: black;
-	font-size: 14px;
 }
 
-form > button {
+.login > form > button {
 	margin-bottom: 20px;
 	background-color: #0a66c2;
 	color: white;
@@ -42,6 +44,6 @@ form > button {
 	text-decoration: underline;
 	cursor: pointer;
 }
-p {
+.login > p {
 	margin-bottom: 20px;
 }

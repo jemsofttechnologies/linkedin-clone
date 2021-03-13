@@ -7,8 +7,16 @@ import SupervisorAccountIcon from "@material-ui/icons/SupervisorAccount";
 import BusinessCenterIcon from "@material-ui/icons/BusinessCenter";
 import SmsIcon from "@material-ui/icons/Sms";
 import NotificationsIcon from "@material-ui/icons/Notifications";
+import { useDispatch } from "react-redux";
+import { logout } from "./features/userSlice";
+import { auth } from "./firebase";
 
 function Header() {
+	const dispatch = useDispatch();
+	const onClick = () => {
+		dispatch(logout());
+		auth.signOut();
+	};
 	return (
 		<div className="header">
 			<div className="header__left">
@@ -33,10 +41,7 @@ function Header() {
 					title="Notifications"
 					Icon={NotificationsIcon}
 				/>
-				<HeaderOptions
-					avatar="https://cdn2.iconfinder.com/data/icons/audio-16/96/user_avatar_profile_login_button_account_member-512.png"
-					title="me"
-				/>
+				<HeaderOptions title="me" onClick={onClick} avatar={true} />
 			</div>
 		</div>
 	);
